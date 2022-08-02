@@ -31,7 +31,11 @@
             resize: none;
             <!-- ? resize none ile texareanın boyutunu kullanıcının istediği gibi değiştirmesini engelleriz -->
             width: 300px;
-            height: 100px;
+            height: 10px;
+        }
+        .add{
+            display: inline-block;
+            width: 120px;
         }
     </style>
     <title>Formlar</title>
@@ -162,6 +166,29 @@
         <br>
         <textarea name="girilen_yorum" id="textarea" placeholder="Şikayet, İstek ve Fikirleriniz..."></textarea>
         <!-- ? kullanıcıya textarea yazı yazarak backende gönderebileceği bir yazı alanı verebiliriz -->
+    </div>
+    <div>
+        <label for="input_browser">Favori Browseriniz:</label>
+        <input type="text" name="Kullanılan Browser" id="input-browser" list="browsers">
+        <datalist id="browsers">
+            <option value="FireFox">FireFox</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Safari">Safari</option>
+            <option value="Opera">Opera</option>
+            <option value="Yandex">Yandex</option>
+            <!-- ? datalist ile yine kullanıcıya seçim yaptırız ancak kullanıcının istediği seçenek olmaması durumda kendisinin cevabını eklemesine olanak verilebilir -->
+        </datalist>
+    </div>
+    <div>
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            <label class="add" for="ad">Name :</label>
+            <input type="text" name="isim" id="soyad">
+            <br>
+            <label class="add" for="soyad">Surname:</label>
+            <input type="text" name="soyad" id="soyad">
+        </fieldset>
+        <!-- ? filedset ile inputlarımızı ve labellerimizi daha güçlü görsellik ile destekleyebiliriz -->
     </div>
     <input type="submit" value="Gönder" id="button">
     <br>
