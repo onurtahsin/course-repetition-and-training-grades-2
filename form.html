@@ -27,6 +27,12 @@
             background-color: wheat;
             color: red;
         }
+        #textarea{
+            resize: none;
+            <!-- ? resize none ile texareanın boyutunu kullanıcının istediği gibi değiştirmesini engelleriz -->
+            width: 300px;
+            height: 100px;
+        }
     </style>
     <title>Formlar</title>
 </head>
@@ -110,6 +116,52 @@
         <label for="telefon">Tel No:</label>
         <input type="tel" name="tel_no" id="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="xxx-xxx-xx-xx">
         <!-- ? inputta pattern belirleyerek kaç numara kullanılacağını veya numaraların nasıl gruplandırılacağını belirleyebiliyoruz -->
+    </div>
+    <div>
+        <label for="tatlı">Favori Tatlınızı Seçiniz:</label>
+        <br>
+        <select name="seçilen_tatlı" id="tatlı" size="3" multiple>
+            <option value="baklava">Baklava</option>
+            <option value="keşkül">Keşkül</option>
+            <option value="tulumba">Tulumba</option>
+            <option value="magnolya">Magnolya</option>
+            <option value="puding">Puding</option>
+            <option value="şekerpare">Şekerpare</option>
+            <option value="kazandibi">Kazandibi</option>
+        </select>
+        <!-- ? açılır menü ile seçim yapmamıza olanak sağlayan HTML yöntem budur -->
+        <!-- ? size vererek kaç seçeneğin görüneceğini belirleyebiliyoruz bu şekilde yapıldığına açılır menü gider yerine aşağı  yukarı barı ile kontrol ettiğimiz şekile döner-->
+        <!-- ? selecte multiple yazarak çok seçim yapmaya olanak sağlarız -->
+    </div>
+    <div>
+        <label for="arabamı_tatlımı">Hangi Tatlı ve Arabayı Tercih Edersiniz</label>
+        <br>
+        <select name="seçilen_tatlı_ve_araba" id="tatlıvearaba" size="6" multiple>
+        <optgroup label="Tatlılar">
+            <option value="baklava">Baklava</option>
+            <option value="keşkül">Keşkül</option>
+            <option value="tulumba">Tulumba</option>
+            <option value="magnolya">Magnolya</option>
+            <option value="puding">Puding</option>
+            <option value="şekerpare">Şekerpare</option>
+            <option value="kazandibi">Kazandibi</option>
+        </optgroup>
+        <optgroup label="Arabalar">
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="kia">KIA</option>
+            <option value="honda">Honda</option>
+            <option value="volvo">Volvo</option>
+            <option value="ferrari">Ferrari</option>
+        </optgroup>
+        <!-- ? optgroup ile aynı select içerisine iki farklı grup yapabiliriz burada tatlılar ve arabalar olarak ayırarak kullandık -->
+    </select>
+    </div>
+    <div>
+        <label for="textarea">Yorum ve Eleştiriler</label>
+        <br>
+        <textarea name="girilen_yorum" id="textarea" placeholder="Şikayet, İstek ve Fikirleriniz..."></textarea>
+        <!-- ? kullanıcıya textarea yazı yazarak backende gönderebileceği bir yazı alanı verebiliriz -->
     </div>
     <input type="submit" value="Gönder" id="button">
     <br>
