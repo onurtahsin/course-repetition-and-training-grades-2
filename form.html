@@ -29,10 +29,11 @@
         }
         #textarea{
             resize: none;
-            <!-- ? resize none ile texareanın boyutunu kullanıcının istediği gibi değiştirmesini engelleriz -->
+            margin-top: 10px;
             width: 300px;
-            height: 10px;
+            
         }
+
         .add{
             display: inline-block;
             width: 120px;
@@ -165,8 +166,13 @@
         <label for="textarea">Yorum ve Eleştiriler</label>
         <br>
         <textarea name="girilen_yorum" id="textarea" placeholder="Şikayet, İstek ve Fikirleriniz..."></textarea>
+        <br>
         <!-- ? kullanıcıya textarea yazı yazarak backende gönderebileceği bir yazı alanı verebiliriz -->
+        <!-- ? style verdğimiz resize none ile texareanın boyutunu kullanıcının istediği gibi değiştirmesini engelleriz -->
     </div>
+    <br>
+    <br>
+    <br>
     <div>
         <label for="input_browser">Favori Browseriniz:</label>
         <input type="text" name="Kullanılan Browser" id="input-browser" list="browsers">
@@ -178,7 +184,9 @@
             <option value="Yandex">Yandex</option>
             <!-- ? datalist ile yine kullanıcıya seçim yaptırız ancak kullanıcının istediği seçenek olmaması durumda kendisinin cevabını eklemesine olanak verilebilir -->
         </datalist>
+        
     </div>
+    <br>
     <div>
         <fieldset>
             <legend>Kişisel Bilgiler</legend>
